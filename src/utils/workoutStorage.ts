@@ -31,10 +31,15 @@ export function saveRoutines(routines: WorkoutRoutine[]) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(routines));
 }
 
-export function updateRoutine(updatedRoutine: WorkoutRoutine) {
+export function updateRoutine(routine: WorkoutRoutine): void {
   const routines = loadRoutines();
-  const newRoutines = routines.map(routine =>
-    routine.id === updatedRoutine.id ? updatedRoutine : routine
-  );
-  saveRoutines(newRoutines);
+  const foundIndex = routines.findIndex((r: WorkoutRoutine) => r.id === routine.id);
+  if (foundIndex !== -1) {
+    // Routine exists: update it.
+    routines[foundIndex] = routine;
+  } else {
+    // Routine doesn't exist: add it.
+    routines.push(routine);
+  }
+  saveRoutines(routines);
 } 
