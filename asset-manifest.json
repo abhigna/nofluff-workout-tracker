@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nofluff-workout-tracker/static/css/main.3c4fed26.css",
+    "main.js": "/nofluff-workout-tracker/static/js/main.60bdaa9b.js",
+    "index.html": "/nofluff-workout-tracker/index.html",
+    "main.3c4fed26.css.map": "/nofluff-workout-tracker/static/css/main.3c4fed26.css.map",
+    "main.60bdaa9b.js.map": "/nofluff-workout-tracker/static/js/main.60bdaa9b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c4fed26.css",
+    "static/js/main.60bdaa9b.js"
+  ]
+}
